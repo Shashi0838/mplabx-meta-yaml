@@ -16,7 +16,8 @@ spec:
       public: true
       targetPort: 8080
       attributes:
-      protocol: http
+        discoverable: false
+        protocol: http
   containers:
    - name: mplab-rest-server
      image: "453345707098.dkr.ecr.us-west-2.amazonaws.com/xpress/mplab-rest-server:latest"
