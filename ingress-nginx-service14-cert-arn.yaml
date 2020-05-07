@@ -9,7 +9,6 @@ metadata: ~
 name: ingress-nginx
 namespace: ingress-nginx
 rules: 
-  - 
     host: xpress.microchip.com
     http: 
       backend: 
