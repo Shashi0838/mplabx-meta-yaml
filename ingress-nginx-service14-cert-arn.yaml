@@ -9,7 +9,7 @@ annotations:
   alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
 spec:
 rules:
-- host: *.xpress.microchip.com
+- host: xpress.microchip.com
   http:
     paths:
     - path: /*
