@@ -1,19 +1,21 @@
+--- 
+annotations: 
+  alb.ingress.kubernetes.io/listen-ports: "[{\"HTTPS\":443}]"
+  alb.ingress.kubernetes.io/ssl-policy: ELBSecurityPolicy-TLS-1-1-2017-01
+  kubernetes.io/ingress.class: alb
 apiVersion: extensions/v1beta1
 kind: Ingress
-metadata:
-namespace: ingress-nginx
+metadata: ~
 name: ingress-nginx
-annotations:
-  kubernetes.io/ingress.class: alb
-  alb.ingress.kubernetes.io/ssl-policy: ELBSecurityPolicy-TLS-1-1-2017-01
-  alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
-spec:
-rules:
-- host: xpress.microchip.com
-  http:
-    paths:
-    - path: /*
-    backend:
-      serviceName: ingress-nginx
-      servicePort: 80
-      
+namespace: ingress-nginx
+rules: 
+  - 
+    host: xpress.microchip.com
+    http: 
+      backend: 
+        serviceName: ingress-nginx
+        servicePort: 80
+      paths: 
+        - 
+          path: /*
+spec: ~
